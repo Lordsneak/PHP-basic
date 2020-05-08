@@ -118,22 +118,24 @@ $text = "Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet
           <h2>Event Speakers</h2>
           <p>Here are some of our speakers</p>
         </div>
-        <?php
-$speaker = array ('Brenden Legros' , 'Hubert Hirthe' ,'Cole Emmerich' ,'Jack Christiansen' ,'Alejandrin Littel' ,'Willow Trantow');
-$images=array('1','2','3','4','5','6');
-$desc=array('Quas alias incidunt','Consequuntur odio aut','Fugiat laborum et','Debitis iure vero','Qui molestiae natus','Non autem dicta');
-
+        <?php 
+$speakers = [
+['img' => 1 , 'name' => 'Brenden Legros' , 'desc' => 'Quas alias incidunt'],
+['img' => 2 , 'name' => 'Hubert Hirthe' , 'desc' => 'Consequuntur odio aut'],
+['img' => 3 , 'name' => 'Cole Emmerich', 'desc' => 'Fugiat laborum et'],
+['img' => 4 , 'name' => 'Jack Christiansen', 'desc' => 'Debitis iure vero'],
+['img' => 5 , 'name' => 'Alejandrin Littel', 'desc' => 'Qui molestiae natus'],
+['img' => 6 , 'name' => 'Willow Trantow', 'desc' => 'Non autem dicta'],
+]        
 ?>
         <div class="row">
-        <?php foreach( $speaker as $speak) { ?> 
-          <?php foreach( $images as $image) { ?> 
-            <?php foreach( $desc as $descr) { ?> 
+        <?php foreach( $speakers as $speak) { ?> 
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/<?php echo $image ?>.jpg" alt="Speaker 1" class="img-fluid">
+              <img src="img/speakers/<?php echo $speak['img'] ?>.jpg" alt="Speaker 1" class="img-fluid">
               <div class="details">
-                <h3><a href="speaker-details.php"><?php echo $speak ?></a></h3>
-                <p><?php echo $descr ?></p>
+                <h3><a href="speaker-details.php"><?php echo $speak['name'] ?></a></h3>
+                <p><?php echo $descr['desc'] ?></p>
                 <div class="social">
                   <a href=""><i class="fa fa-twitter"></i></a>
                   <a href=""><i class="fa fa-facebook"></i></a>
@@ -141,87 +143,11 @@ $desc=array('Quas alias incidunt','Consequuntur odio aut','Fugiat laborum et','D
                   <a href=""><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
-            </div>            
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/speakers/<?php echo $image ?>.jpg" alt="Speaker 2" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.php"><?php echo $speak ?></a></h3>
-                <p><?php echo $descr ?></p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
+            </div> 
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/speakers/<?php echo $image ?>.jpg" alt="Speaker 3" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.php"><?php echo $speak ?></a></h3>
-                <p><?php echo $descr ?></p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
+            <?php } ?>            
+  
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/speakers/<?php echo $image ?>.jpg" alt="Speaker 4" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.php"><?php echo $speak ?></a></h3>
-                <p><?php echo $speakers[$i]['desc'] ?></p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/speakers/<?php echo $image ?>.jpg" alt="Speaker 5" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.php"><?php echo $speak ?></a></h3>
-                <p><?php echo $descr ?></p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/speakers/<?php echo $image ?>.jpg" alt="Speaker 6" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.php"><?php echo $speak ?></a></h3>
-                <p><?php echo $descr ?></p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <?php } ?> 
-        <?php } ?> 
-        <?php } ?> 
       </div>
     </section>
 
